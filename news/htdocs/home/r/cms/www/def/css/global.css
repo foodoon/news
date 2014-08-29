@@ -8,7 +8,7 @@ img{border:none; float:none;}
 address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400;}
 ol,ul{list-style:none;}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
-body{margin:0;font:12px Verdana, Arial, Helvetica, sans-serif,"宋体"; color:#42515A; background:url(../img/pbg.jpg) top repeat-x; word-break:break-all;}
+body{margin:0;font:12px Verdana, Arial, Helvetica, sans-serif,"宋体"; color:#42515A;  word-break:break-all;}
 select,input{vertical-align:middle; padding:1px 0;}
 label {cursor:hand;}
 
