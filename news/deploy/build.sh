@@ -1,9 +1,8 @@
-cd .. && svn up
-tomcat_home=/usr/tomcat-sms
-sh ${tomcat_home}/bin/shutdown.sh
+cd .. && git pull
+tomcat_home=/usr/tomcat-news
 mvn package -Dmaven.test.skip=true
 mv assembly/target/news-1.0-SNAPSHOT.war ROOT.war
+rm -rf ${tomcat_home}/webapps/ROOT
+rm -rf ${tomcat_home}/webapps/ROOT.war
 cp ROOT.war ${tomcat_home}/webapps/
 
-rm -rf ${tomcat_home}/webapps/ROOT
-sh ${tomcat_home}/bin/startup.sh
