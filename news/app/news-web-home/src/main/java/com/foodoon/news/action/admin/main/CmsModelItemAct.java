@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.core.web.WebErrors;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,7 @@ import com.foodoon.news.entity.main.CmsModel;
 import com.foodoon.news.entity.main.CmsModelItem;
 import com.foodoon.news.manager.main.CmsModelItemMng;
 import com.foodoon.news.manager.main.CmsModelMng;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class CmsModelItemAct {

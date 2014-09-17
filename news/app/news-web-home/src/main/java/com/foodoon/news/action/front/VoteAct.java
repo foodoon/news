@@ -12,6 +12,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,9 +36,6 @@ import com.foodoon.news.manager.assist.CmsVoteRecordMng;
 import com.foodoon.news.manager.assist.CmsVoteReplyMng;
 import com.foodoon.news.manager.assist.CmsVoteSubTopicMng;
 import com.foodoon.news.manager.assist.CmsVoteTopicMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
-import com.foodoon.news.web.WebErrors;
 
 @Controller
 public class VoteAct {

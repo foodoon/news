@@ -7,6 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.store.LockObtainFailedException;
@@ -23,7 +24,6 @@ import com.foodoon.common.web.ResponseUtils;
 import com.foodoon.news.entity.main.Channel;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.main.ChannelMng;
-import com.foodoon.news.web.CmsUtils;
 
 @Controller
 public class LuceneContentAct {

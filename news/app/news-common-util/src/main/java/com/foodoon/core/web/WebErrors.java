@@ -1,5 +1,6 @@
 package com.foodoon.core.web;
 
+import java.io.Serializable;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -53,4 +54,9 @@ public class WebErrors extends com.foodoon.common.web.springmvc.WebErrors {
 	protected String getErrorPage() {
 		return ERROR_PAGE;
 	}
+
+    public void notInSite(Class<?> clazz, Serializable id) {
+        addErrorCode("error.notInSite", clazz.getSimpleName(), id);
+    }
+
 }

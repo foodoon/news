@@ -1,9 +1,9 @@
-package com.foodoon.news.web;
-
-import javax.servlet.http.HttpServletRequest;
+package com.foodoon.news.helper;
 
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 提供一些CMS系统中使用到的共用方法

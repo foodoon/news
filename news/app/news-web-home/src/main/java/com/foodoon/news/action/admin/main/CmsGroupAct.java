@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsGroupMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsSiteMng;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class CmsGroupAct {

@@ -4,13 +4,14 @@ import static com.foodoon.common.web.Constants.UTF8;
 import static com.foodoon.common.web.freemarker.DirectiveUtils.OUT_PAGINATION;
 import static com.foodoon.news.Constants.TPL_STYLE_LIST;
 import static com.foodoon.news.Constants.TPL_SUFFIX;
-import static com.foodoon.news.web.FrontUtils.PARAM_STYLE_LIST;
+
 import static freemarker.template.ObjectWrapper.DEFAULT_WRAPPER;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 
 import com.foodoon.common.page.Pagination;
@@ -19,7 +20,7 @@ import com.foodoon.common.web.freemarker.ParamsRequiredException;
 import com.foodoon.common.web.freemarker.DirectiveUtils.InvokeType;
 import com.foodoon.news.action.directive.abs.AbstractChannelDirective;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.FrontUtils;
+
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;
@@ -61,15 +62,15 @@ public class ChannelPageDirective extends AbstractChannelDirective {
 		Map<String, TemplateModel> origMap = DirectiveUtils
 				.addParamsToVariable(env, paramWrap);
 		InvokeType type = DirectiveUtils.getInvokeType(params);
-		String listStyle = DirectiveUtils.getString(PARAM_STYLE_LIST, params);
+		String listStyle = DirectiveUtils.getString(FrontUtils.PARAM_STYLE_LIST, params);
 		if (InvokeType.sysDefined == type) {
 			if (StringUtils.isBlank(listStyle)) {
-				throw new ParamsRequiredException(PARAM_STYLE_LIST);
+				throw new ParamsRequiredException(FrontUtils.PARAM_STYLE_LIST);
 			}
 			env.include(TPL_STYLE_LIST + listStyle + TPL_SUFFIX, UTF8, true);
 		} else if (InvokeType.userDefined == type) {
 			if (StringUtils.isBlank(listStyle)) {
-				throw new ParamsRequiredException(PARAM_STYLE_LIST);
+				throw new ParamsRequiredException(FrontUtils.PARAM_STYLE_LIST);
 			}
 			FrontUtils.includeTpl(TPL_STYLE_LIST, site, env);
 		} else if (InvokeType.custom == type) {

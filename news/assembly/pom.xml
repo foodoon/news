@@ -100,7 +100,7 @@
 				<version>3.1.1.RELEASE</version>
 			</dependency>
 			<dependency>
-				<groupId>opensymphony</groupId>
+				<groupId>org.opensymphony</groupId>
 				<artifactId>quartz-all</artifactId>
 				<version>1.6.3</version>
 			</dependency>

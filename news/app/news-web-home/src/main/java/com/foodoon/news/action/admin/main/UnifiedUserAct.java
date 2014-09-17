@@ -18,7 +18,7 @@ import com.foodoon.common.web.CookieUtils;
 import com.foodoon.common.web.ResponseUtils;
 import com.foodoon.core.entity.UnifiedUser;
 import com.foodoon.core.manager.UnifiedUserMng;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class UnifiedUserAct {

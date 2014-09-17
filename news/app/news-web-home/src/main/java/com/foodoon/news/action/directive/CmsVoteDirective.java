@@ -13,7 +13,7 @@ import com.foodoon.common.web.freemarker.DirectiveUtils;
 import com.foodoon.news.entity.assist.CmsVoteTopic;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsVoteTopicMng;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

@@ -4,7 +4,8 @@ import static com.foodoon.common.web.Constants.UTF8;
 import static com.foodoon.common.web.freemarker.DirectiveUtils.OUT_LIST;
 import static com.foodoon.news.Constants.TPL_STYLE_LIST;
 import static com.foodoon.news.Constants.TPL_SUFFIX;
-import static com.foodoon.news.web.FrontUtils.PARAM_STYLE_LIST;
+//import static com.foodoon.news.helper.FrontUtils.PARAM_STYLE_LIST;
+import static com.foodoon.news.helper.FrontUtils.PARAM_STYLE_LIST;
 import static freemarker.template.ObjectWrapper.DEFAULT_WRAPPER;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 
 import com.foodoon.common.web.freemarker.DirectiveUtils;
@@ -20,7 +22,7 @@ import com.foodoon.common.web.freemarker.DirectiveUtils.InvokeType;
 import com.foodoon.news.action.directive.abs.AbstractChannelDirective;
 import com.foodoon.news.entity.main.Channel;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.FrontUtils;
+//import com.foodoon.news.helper.FrontUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

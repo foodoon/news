@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ import com.foodoon.core.entity.Ftp;
 import com.foodoon.core.manager.DbFileMng;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.MarkConfig;
-import com.foodoon.news.web.CmsUtils;
+
 
 /**
  * FCK服务器端接口

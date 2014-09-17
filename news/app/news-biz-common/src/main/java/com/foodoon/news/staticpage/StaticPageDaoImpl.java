@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.CacheMode;
 import org.hibernate.Query;
@@ -32,7 +33,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.Content;
 import com.foodoon.news.entity.main.ContentCheck;
 import com.foodoon.news.manager.assist.CmsKeywordMng;
-import com.foodoon.news.web.FrontUtils;
+
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

@@ -34,8 +34,8 @@ import com.foodoon.news.manager.assist.CmsFileMng;
 import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsTopicMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class CmsTopicAct {

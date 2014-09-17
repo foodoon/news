@@ -8,6 +8,8 @@ import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +31,6 @@ import com.foodoon.news.manager.assist.CmsKeywordMng;
 import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.ContentMng;
 import com.foodoon.news.staticpage.StaticPageSvcImpl;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
 
 @Controller
 public class DynamicPageAct {

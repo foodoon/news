@@ -8,6 +8,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,8 +32,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsResourceMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsSiteMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 /**
  * 模板的Action

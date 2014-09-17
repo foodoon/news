@@ -16,7 +16,7 @@ import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsSiteMng;
 import com.foodoon.news.manager.main.ContentMng;
 import com.foodoon.news.manager.main.ContentTagMng;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveModel;

@@ -36,7 +36,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.MarkConfig;
 import com.foodoon.news.manager.main.CmsUserMng;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 /**
  * FCK服务器端接口

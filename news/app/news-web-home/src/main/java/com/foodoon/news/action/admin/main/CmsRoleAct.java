@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.foodoon.news.entity.main.CmsRole;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsRoleMng;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class CmsRoleAct {

@@ -4,6 +4,8 @@ import static com.foodoon.common.page.SimplePage.cpn;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,8 +21,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.ContentTag;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.ContentTagMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class ContentTagAct {

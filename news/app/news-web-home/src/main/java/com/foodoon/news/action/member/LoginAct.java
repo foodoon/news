@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.foodoon.common.web.RequestUtils;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 @Controller
 public class LoginAct {

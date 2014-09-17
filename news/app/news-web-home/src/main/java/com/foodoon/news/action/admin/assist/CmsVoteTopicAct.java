@@ -11,6 +11,8 @@ import java.util.TreeSet;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -30,8 +32,7 @@ import com.foodoon.news.manager.assist.CmsVoteItemMng;
 import com.foodoon.news.manager.assist.CmsVoteSubTopicMng;
 import com.foodoon.news.manager.assist.CmsVoteTopicMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class CmsVoteTopicAct {

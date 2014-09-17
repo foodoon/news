@@ -4,19 +4,16 @@ import static com.foodoon.common.web.Constants.UTF8;
 import static com.foodoon.news.Constants.TPLDIR_STYLE_PAGE;
 import static com.foodoon.news.Constants.TPL_STYLE_PAGE_CONTENT;
 import static com.foodoon.news.Constants.TPL_SUFFIX;
-import static com.foodoon.news.web.FrontUtils.PARAM_SYS_PAGE;
-import static com.foodoon.news.web.FrontUtils.PARAM_USER_PAGE;
-import static com.foodoon.news.web.FrontUtils.getTplPath;
+
 
 import java.io.IOException;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 
 import com.foodoon.common.web.freemarker.DirectiveUtils;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.FrontUtils;
-
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;
 import freemarker.template.TemplateDirectiveModel;
@@ -38,13 +35,13 @@ public class PaginationDirective implements TemplateDirectiveModel {
 		CmsSite site = FrontUtils.getSite(env);
 		String content = DirectiveUtils.getString(PARAM_CONTENT, params);
 		if ("1".equals(content)) {
-			String sysPage = DirectiveUtils.getString(PARAM_SYS_PAGE, params);
-			String userPage = DirectiveUtils.getString(PARAM_USER_PAGE, params);
+			String sysPage = DirectiveUtils.getString(FrontUtils.PARAM_SYS_PAGE, params);
+			String userPage = DirectiveUtils.getString(FrontUtils.PARAM_USER_PAGE, params);
 			if (!StringUtils.isBlank(sysPage)) {
 				String tpl = TPL_STYLE_PAGE_CONTENT + sysPage + TPL_SUFFIX;
 				env.include(tpl, UTF8, true);
 			} else if (!StringUtils.isBlank(userPage)) {
-				String tpl = getTplPath(site.getSolutionPath(),
+				String tpl = FrontUtils.getTplPath(site.getSolutionPath(),
 						TPLDIR_STYLE_PAGE, userPage);
 				env.include(tpl, UTF8, true);
 			} else {

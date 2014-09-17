@@ -2,7 +2,7 @@ package com.foodoon.news.manager.assist.impl;
 
 import static com.foodoon.common.web.Constants.SPT;
 import static com.foodoon.common.web.Constants.UTF8;
-import static com.foodoon.news.web.FrontUtils.RES_EXP;
+
 
 import java.io.File;
 import java.io.FileFilter;
@@ -16,6 +16,8 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
 
+
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.tools.zip.ZipEntry;
@@ -34,7 +36,7 @@ import com.foodoon.news.entity.assist.CmsFile;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsFileMng;
 import com.foodoon.news.manager.assist.CmsResourceMng;
-import com.foodoon.news.web.FrontUtils;
+
 
 @Service
 public class CmsResourceMngImpl implements CmsResourceMng {
@@ -235,7 +237,8 @@ public class CmsResourceMngImpl implements CmsResourceMng {
 		Enumeration<ZipEntry> en = zip.getEntries();
 		while (en.hasMoreElements()) {
 			name = en.nextElement().getName();
-			if (!name.startsWith(RES_EXP)) {
+            //import static com.foodoon.news.helper.FrontUtils.RES_EXP;
+			if (!name.startsWith(FrontUtils.RES_EXP)) {
 				solution = name.substring(0, name.indexOf("/"));
 				break;
 			}
@@ -250,9 +253,9 @@ public class CmsResourceMngImpl implements CmsResourceMng {
 				name = entry.getName();
 				log.debug("unzip file：{}", name);
 				// 模板还是资源
-				if (name.startsWith(RES_EXP)) {
+				if (name.startsWith(FrontUtils.RES_EXP)) {
 					filename = resRoot + "/" + solution
-							+ name.substring(RES_EXP.length());
+							+ name.substring(FrontUtils.RES_EXP.length());
 				} else {
 					filename = tplRoot + SPT + name;
 				}

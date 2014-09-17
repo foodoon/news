@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,7 @@ import com.foodoon.common.web.springmvc.RealPathResolver;
 import com.foodoon.news.entity.main.Channel;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.Content;
-import com.foodoon.news.web.FrontUtils;
+
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,8 +19,7 @@ import com.foodoon.news.entity.assist.CmsAdvertisingSpace;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsAdvertisingMng;
 import com.foodoon.news.manager.assist.CmsAdvertisingSpaceMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+
 
 /**
  * 广告Action
@@ -41,7 +42,7 @@ public class AdvertisingAct {
 		}
 		FrontUtils.frontData(request, model, site);
 		return FrontUtils.getTplPath(request, site.getSolutionPath(),
-				TPLDIR_CSI, TPL_AD);
+                TPLDIR_CSI, TPL_AD);
 	}
 
 	@RequestMapping(value = "/adspace.jspx")

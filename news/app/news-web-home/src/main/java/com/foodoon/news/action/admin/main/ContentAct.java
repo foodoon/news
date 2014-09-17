@@ -78,8 +78,8 @@ import com.foodoon.news.staticpage.exception.GeneratedZeroStaticPageException;
 import com.foodoon.news.staticpage.exception.StaticPageNotOpenException;
 import com.foodoon.news.staticpage.exception.TemplateNotFoundException;
 import com.foodoon.news.staticpage.exception.TemplateParseException;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class ContentAct {

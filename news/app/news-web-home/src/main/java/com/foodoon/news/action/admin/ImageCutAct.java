@@ -16,7 +16,7 @@ import com.foodoon.common.upload.FileRepository;
 import com.foodoon.core.entity.Ftp;
 import com.foodoon.core.manager.DbFileMng;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 @Controller
 public class ImageCutAct {

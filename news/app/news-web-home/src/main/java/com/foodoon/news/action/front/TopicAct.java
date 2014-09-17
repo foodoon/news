@@ -18,8 +18,8 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsTopic;
 import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsTopicMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 @Controller
 public class TopicAct {

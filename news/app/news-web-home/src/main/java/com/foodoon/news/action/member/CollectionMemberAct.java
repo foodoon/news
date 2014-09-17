@@ -22,8 +22,8 @@ import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.MemberConfig;
 import com.foodoon.news.manager.main.CmsUserMng;
 import com.foodoon.news.manager.main.ContentMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 /**
  * 收藏信息Action

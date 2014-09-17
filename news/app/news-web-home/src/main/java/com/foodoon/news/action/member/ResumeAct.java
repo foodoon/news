@@ -9,6 +9,9 @@ import java.util.Calendar;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,9 +37,7 @@ import com.foodoon.news.manager.assist.CmsJobApplyMng;
 import com.foodoon.news.manager.main.CmsUserExtMng;
 import com.foodoon.news.manager.main.CmsUserResumeMng;
 import com.foodoon.news.manager.main.ContentMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 /**
  * 简历中心Action

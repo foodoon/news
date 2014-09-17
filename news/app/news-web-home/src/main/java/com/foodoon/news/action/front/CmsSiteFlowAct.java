@@ -12,7 +12,7 @@ import com.foodoon.common.web.RequestUtils;
 import com.foodoon.common.web.ResponseUtils;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.service.CmsSiteFlowCache;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 @Controller
 public class CmsSiteFlowAct {

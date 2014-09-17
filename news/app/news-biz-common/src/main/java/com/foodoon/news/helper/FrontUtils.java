@@ -1,139 +1,130 @@
-package com.foodoon.news.web;
+package com.foodoon.news.helper;
+
+import com.foodoon.common.web.RequestUtils;
+import com.foodoon.common.web.freemarker.DirectiveUtils;
+import com.foodoon.common.web.springmvc.MessageResolver;
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.core.web.front.URLHelper;
+import com.foodoon.core.web.front.URLHelper.PageInfo;
+import com.foodoon.news.entity.main.CmsSite;
+import com.foodoon.news.entity.main.CmsUser;
+import freemarker.core.Environment;
+import freemarker.template.*;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.propertyeditors.LocaleEditor;
+import org.springframework.context.MessageSource;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Map;
 
 import static com.foodoon.common.web.Constants.MESSAGE;
 import static com.foodoon.common.web.Constants.UTF8;
 import static com.foodoon.common.web.ProcessTimeFilter.START_TIME;
 import static com.foodoon.common.web.freemarker.DirectiveUtils.PARAM_TPL_SUB;
 import static com.foodoon.core.action.front.LoginAct.PROCESS_URL;
-import static com.foodoon.news.Constants.RES_PATH;
-import static com.foodoon.news.Constants.TPLDIR_COMMON;
-import static com.foodoon.news.Constants.TPLDIR_STYLE_LIST;
-import static com.foodoon.news.Constants.TPLDIR_TAG;
-import static com.foodoon.news.Constants.TPL_STYLE_PAGE_CHANNEL;
-import static com.foodoon.news.Constants.TPL_SUFFIX;
-
-import java.io.IOException;
-import java.util.Locale;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.propertyeditors.LocaleEditor;
-import org.springframework.context.MessageSource;
-
-import com.foodoon.common.web.RequestUtils;
-import com.foodoon.common.web.freemarker.DirectiveUtils;
-import com.foodoon.common.web.springmvc.MessageResolver;
-import com.foodoon.core.web.front.URLHelper;
-import com.foodoon.core.web.front.URLHelper.PageInfo;
-import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.entity.main.CmsUser;
-
-import freemarker.core.Environment;
-import freemarker.template.AdapterTemplateModel;
-import freemarker.template.TemplateException;
-import freemarker.template.TemplateModel;
-import freemarker.template.TemplateModelException;
-import freemarker.template.TemplateNumberModel;
+import static com.foodoon.news.Constants.*;
 
 /**
  * 前台工具类
  */
 public class FrontUtils {
-	/**
-	 * 页面没有找到
-	 */
-	public static final String PAGE_NOT_FOUND = "tpl.pageNotFound";
-	/**
-	 * 操作成功页面
-	 */
-	public static final String SUCCESS_PAGE = "tpl.successPage";
-	/**
-	 * 操作失败页面
-	 */
-	public static final String ERROR_PAGE = "tpl.errorPage";
-	/**
-	 * 信息提示页面
-	 */
-	public static final String MESSAGE_PAGE = "tpl.messagePage";
-	/**
-	 * 系统资源路径
-	 */
-	public static final String RES_SYS = "resSys";
-	/**
-	 * 模板资源路径
-	 */
-	public static final String RES_TPL = "res";
-	/**
-	 * 模板资源表达式
-	 */
-	public static final String RES_EXP = "${res}";
-	/**
-	 * 部署路径
-	 */
-	public static final String BASE = "base";
-	/**
-	 * 站点
-	 */
-	public static final String SITE = "site";
-	/**
-	 * 用户
-	 */
-	public static final String USER = "user";
-	/**
-	 * 页码
-	 */
-	public static final String PAGE_NO = "pageNo";
-	/**
-	 * 总条数
-	 */
-	public static final String COUNT = "count";
-	/**
-	 * 起始条数
-	 */
-	public static final String FIRST = "first";
 
-	/**
-	 * 页面完整地址
-	 */
-	public static final String LOCATION = "location";
-	/**
-	 * 页面翻页地址
-	 */
-	public static final String HREF = "href";
-	/**
-	 * href前半部（相对于分页）
-	 */
-	public static final String HREF_FORMER = "hrefFormer";
-	/**
-	 * href后半部（相对于分页）
-	 */
-	public static final String HREF_LATTER = "hrefLatter";
+    /**
+     * 页面没有找到
+     */
+    public static final String PAGE_NOT_FOUND = "tpl.pageNotFound";
+    /**
+     * 操作成功页面
+     */
+    public static final String SUCCESS_PAGE = "tpl.successPage";
+    /**
+     * 操作失败页面
+     */
+    public static final String ERROR_PAGE = "tpl.errorPage";
+    /**
+     * 信息提示页面
+     */
+    public static final String MESSAGE_PAGE = "tpl.messagePage";
+    /**
+     * 系统资源路径
+     */
+    public static final String RES_SYS = "resSys";
+    /**
+     * 模板资源路径
+     */
+    public static final String RES_TPL = "res";
+    /**
+     * 模板资源表达式
+     */
+    public static final String RES_EXP = "${res}";
+    /**
+     * 部署路径
+     */
+    public static final String BASE = "base";
+    /**
+     * 站点
+     */
+    public static final String SITE = "site";
+    /**
+     * 用户
+     */
+    public static final String USER = "user";
+    /**
+     * 页码
+     */
+    public static final String PAGE_NO = "pageNo";
+    /**
+     * 总条数
+     */
+    public static final String COUNT = "count";
+    /**
+     * 起始条数
+     */
+    public static final String FIRST = "first";
 
-	/**
-	 * 传入参数，列表样式。
-	 */
-	public static final String PARAM_STYLE_LIST = "styleList";
-	/**
-	 * 传入参数，系统预定义翻页。
-	 */
-	public static final String PARAM_SYS_PAGE = "sysPage";
-	/**
-	 * 传入参数，用户自定义翻页。
-	 */
-	public static final String PARAM_USER_PAGE = "userPage";
+    /**
+     * 页面完整地址
+     */
+    public static final String LOCATION = "location";
+    /**
+     * 页面翻页地址
+     */
+    public static final String HREF = "href";
+    /**
+     * href前半部（相对于分页）
+     */
+    public static final String HREF_FORMER = "hrefFormer";
+    /**
+     * href后半部（相对于分页）
+     */
+    public static final String HREF_LATTER = "hrefLatter";
 
-	/**
-	 * 返回页面
-	 */
-	public static final String RETURN_URL = "returnUrl";
+    /**
+     * 传入参数，列表样式。
+     */
+    public static final String PARAM_STYLE_LIST = "styleList";
+    /**
+     * 传入参数，系统预定义翻页。
+     */
+    public static final String PARAM_SYS_PAGE = "sysPage";
+    /**
+     * 传入参数，用户自定义翻页。
+     */
+    public static final String PARAM_USER_PAGE = "userPage";
 
-	/**
-	 * 国际化参数
-	 */
-	public static final String ARGS = "args";
+    /**
+     * 返回页面
+     */
+    public static final String RETURN_URL = "returnUrl";
+
+    /**
+     * 国际化参数
+     */
+    public static final String ARGS = "args";
+
 
 	/**
 	 * 获得模板路径。将对模板文件名称进行本地化处理。
@@ -204,7 +195,7 @@ public class FrontUtils {
 		CmsSite site = CmsUtils.getSite(request);
 		frontData(request, model, site);
 		return getTplPath(request, site.getSolutionPath(), TPLDIR_COMMON,
-				PAGE_NOT_FOUND);
+                PAGE_NOT_FOUND);
 	}
 
 	/**
@@ -222,7 +213,7 @@ public class FrontUtils {
 			model.put("nextUrl", nextUrl);
 		}
 		return getTplPath(request, site.getSolutionPath(), TPLDIR_COMMON,
-				SUCCESS_PAGE);
+                SUCCESS_PAGE);
 	}
 
 	/**
@@ -240,7 +231,7 @@ public class FrontUtils {
 		frontData(request, model, site);
 		errors.toModel(model);
 		return getTplPath(request, site.getSolutionPath(), TPLDIR_COMMON,
-				ERROR_PAGE);
+                ERROR_PAGE);
 	}
 
 	/**
@@ -261,7 +252,7 @@ public class FrontUtils {
 			model.put(ARGS, args);
 		}
 		return getTplPath(request, site.getSolutionPath(), TPLDIR_COMMON,
-				MESSAGE_PAGE);
+                MESSAGE_PAGE);
 	}
 
 	/**
@@ -305,7 +296,6 @@ public class FrontUtils {
 	 * 为前台模板设置公用数据
 	 * 
 	 * @param request
-	 * @param model
 	 */
 	public static void frontData(HttpServletRequest request,
 			Map<String, Object> map, CmsSite site) {
@@ -359,8 +349,6 @@ public class FrontUtils {
 	 * 
 	 * @param pageNo
 	 * @param href
-	 * @param urlFormer
-	 * @param urlLatter
 	 * @param map
 	 */
 	public static void frontPageData(int pageNo, String href,
@@ -376,7 +364,7 @@ public class FrontUtils {
 	 * 
 	 * @param env
 	 * @return
-	 * @throws TemplateModelException
+	 * @throws freemarker.template.TemplateModelException
 	 */
 	public static CmsSite getSite(Environment env)
 			throws TemplateModelException {
@@ -385,17 +373,17 @@ public class FrontUtils {
 			return (CmsSite) ((AdapterTemplateModel) model)
 					.getAdaptedObject(CmsSite.class);
 		} else {
-			throw new TemplateModelException("'" + SITE
+			throw new TemplateModelException("'" +SITE
 					+ "' not found in DataModel");
 		}
 	}
 
 	/**
 	 * 标签中获得页码
-	 * 
+	 *
 	 * @param env
 	 * @return
-	 * @throws TemplateException
+	 * @throws freemarker.template.TemplateException
 	 */
 	public static int getPageNo(Environment env) throws TemplateException {
 		TemplateModel pageNo = env.getGlobalVariable(PAGE_NO);
@@ -419,10 +407,10 @@ public class FrontUtils {
 
 	/**
 	 * 标签参数中获得条数。
-	 * 
+	 *
 	 * @param params
 	 * @return 如果不存在，或者小于等于0，或者大于5000则返回5000；否则返回条数。
-	 * @throws TemplateException
+	 * @throws freemarker.template.TemplateException
 	 */
 	public static int getCount(Map<String, TemplateModel> params)
 			throws TemplateException {
@@ -453,13 +441,13 @@ public class FrontUtils {
 
 	/**
 	 * 标签中包含页面
-	 * 
+	 *
 	 * @param tplName
 	 * @param site
 	 * @param params
 	 * @param env
-	 * @throws IOException
-	 * @throws TemplateException
+	 * @throws java.io.IOException
+	 * @throws freemarker.template.TemplateException
 	 */
 	public static void includeTpl(String tplName, CmsSite site,
 			Map<String, TemplateModel> params, Environment env)
@@ -477,12 +465,12 @@ public class FrontUtils {
 
 	/**
 	 * 标签中包含用户预定义列表样式模板
-	 * 
+	 *
 	 * @param listStyle
 	 * @param site
 	 * @param env
-	 * @throws IOException
-	 * @throws TemplateException
+	 * @throws java.io.IOException
+	 * @throws freemarker.template.TemplateException
 	 */
 	public static void includeTpl(String listStyle, CmsSite site,
 			Environment env) throws IOException, TemplateException {

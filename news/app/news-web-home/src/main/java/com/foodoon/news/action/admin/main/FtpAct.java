@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.core.web.WebErrors;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.foodoon.core.entity.Ftp;
 import com.foodoon.core.manager.FtpMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class FtpAct {

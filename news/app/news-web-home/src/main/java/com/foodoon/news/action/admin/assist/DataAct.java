@@ -42,7 +42,7 @@ import com.foodoon.news.entity.back.CmsField;
 import com.foodoon.news.manager.assist.CmsDataBackMng;
 import com.foodoon.news.manager.assist.CmsResourceMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class DataAct {

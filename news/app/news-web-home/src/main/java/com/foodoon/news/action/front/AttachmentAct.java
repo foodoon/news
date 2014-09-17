@@ -22,7 +22,7 @@ import com.foodoon.news.entity.main.Content;
 import com.foodoon.news.entity.main.ContentAttachment;
 import com.foodoon.news.manager.main.ContentCountMng;
 import com.foodoon.news.manager.main.ContentMng;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 @Controller
 public class AttachmentAct {

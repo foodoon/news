@@ -5,6 +5,8 @@ import static com.foodoon.news.Constants.TPLDIR_CSI_CUSTOM;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.foodoon.common.web.RequestUtils;
 import com.foodoon.news.entity.main.CmsSite;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
 
 /**
  * 自定义客户端包含模板

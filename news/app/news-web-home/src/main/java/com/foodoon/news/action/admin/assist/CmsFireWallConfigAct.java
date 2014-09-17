@@ -12,6 +12,7 @@ import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ import com.foodoon.common.web.springmvc.RealPathResolver;
 import com.foodoon.news.Constants;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.main.CmsSiteMng;
-import com.foodoon.news.web.CmsUtils;
+
 
 /**
  * @author Tom
@@ -108,7 +109,7 @@ public class CmsFireWallConfigAct {
 		}
 		p.setProperty(property_firewall_open, open);
 		p.setProperty(property_firewall_domain, domain);
-		CmsSite site=CmsUtils.getSite(request);
+		CmsSite site= CmsUtils.getSite(request);
 		configSiteDomainAlias(site, domain);
 		if(week!=null&&week.length>0){
 			p.setProperty(property_firewall_week,convertArrayToString(week));
