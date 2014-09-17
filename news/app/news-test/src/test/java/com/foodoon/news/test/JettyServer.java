@@ -39,26 +39,10 @@ public class JettyServer {
         webapp.setDescriptor(getWebDescriptor());
         webapp.setResourceBase(getAppRoot() + "/htdocs/home");
         webapp.setContextPath("/");
-        // webapp.addServlet(DefaultServlet.class, "/*/*.jsp");
-       // webapp.setDefaultsDescriptor(getWebDefDescriptor());
-        //HashUserRealm myrealm = null;
-        //        try {
-        //            myrealm = new HashUserRealm("MyRealm", getRealm());
-        //        } catch (IOException e) {
-        //            e.printStackTrace();
-        //        }
-        //        if (myrealm != null) {
-        //            webapp.getSecurityHandler().setUserRealm(myrealm);
-        //        }
-        //  webapp.setParentLoaderPriority(true);
+
         return webapp;
     }
 
-    /**
-     * Setter method for property <tt>jettyPort</tt>.
-     * 
-     * @param jettyPort value to be assigned to property jettyPort
-     */
     public void setJettyPort(int jettyPort) {
         this.jettyPort = jettyPort;
     }
