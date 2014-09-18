@@ -84,6 +84,7 @@ $(function(){
 });
 setTimeout( "countUnreadMsg() ",1000*60*10); 
 function mapDialog(){
+    alert(1)
 	var result=window.showModalDialog("map.do","","dialogHeight:600px;dialogWidth:800px;center:yes;resizable: yes;");
 	if(result!=null){
 		var href=result.split(";")[0];
@@ -125,13 +126,13 @@ function mapDialog(){
                                     <img src="${base}/res/admin/img/admin/loginout-icon.png"/><a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');"><@s.m "global.admin.logout"/></a>　　
                                     <img src="${base}/res/admin/img/admin/message-unread.png"/>&nbsp;<a href="message/v_list.do" target="rightFrame">您有<span id="countDiv"></span>条信息未读</a>
                                     </td>
-                                   <!--
+
                                     <td width="80">
                                    &nbsp; <a href="#" onclick="mapDialog()">【网站地图】</a>
                                     &nbsp;<a id="view_index" href="${site.url}" target="_blank"><@s.m "global.admin.viewFrontIndex"/></a>
                                  
                                     </td>
-                                    -->
+
                                   </tr>
                                 </table>
                        </div>  
@@ -165,7 +166,7 @@ function mapDialog(){
 										<@cms_perm url="/frame/resource_main.do">
 										<li class="normal" id="tb_15" onclick="HoverLi(15);"><a href="frame/resource_main.do" target="mainFrame"><@s.m "cms.function.resource"/></a></li>
 										</@cms_perm>
-										<!--
+
 										<@cms_perm url="/frame/assistant_main.do">
 										<li class="normal" id="tb_16" onclick="HoverLi(16);">
 										<a href="frame/assistant_main.do" target="mainFrame">
@@ -196,12 +197,11 @@ function mapDialog(){
 										<a href="frame/config_main.do" target="mainFrame">
 										<span><@s.m "cms.function.config"/></span></a></li>
 										</@cms_perm>
-										-->
-										<!-- 
+
 										<@cms_perm url="/frame/statistic_main.do">
 										<li class="sep"></li><li class="normal" id="tb_111" onclick="HoverLi(1,11,11);"><a href="frame/statistic_main.do" target="mainFrame"><@s.m "cms.function.statistic"/></a></li>
 										</@cms_perm>
-										 -->
+
                                     </ul>
                                 </td>
                               </tr>
