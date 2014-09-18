@@ -21,7 +21,7 @@ import com.foodoon.core.entity.Ftp;
 import com.foodoon.core.web.WebErrors;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.MarkConfig;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 @Controller
 public class ImageUploadAct extends AbstractUpload {

@@ -22,8 +22,8 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.CmsUserExt;
 import com.foodoon.news.entity.main.CmsUserSite;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.core.web.WebErrors;
 
 /**
  * 本站管理员ACTION

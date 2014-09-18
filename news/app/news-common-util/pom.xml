@@ -35,7 +35,7 @@
 			<artifactId>spring-orm</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>opensymphony</groupId>
+			<groupId>org.opensymphony</groupId>
 			<artifactId>quartz-all</artifactId>
 		</dependency>
 		<dependency>

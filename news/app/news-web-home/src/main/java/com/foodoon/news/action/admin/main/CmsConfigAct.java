@@ -19,7 +19,7 @@ import com.foodoon.news.entity.main.MarkConfig;
 import com.foodoon.news.entity.main.MemberConfig;
 import com.foodoon.news.manager.main.CmsConfigMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class CmsConfigAct {

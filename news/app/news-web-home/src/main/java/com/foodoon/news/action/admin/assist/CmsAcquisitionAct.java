@@ -8,6 +8,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -33,8 +35,7 @@ import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.ContentTypeMng;
 import com.foodoon.news.service.AcquisitionSvc;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class CmsAcquisitionAct {

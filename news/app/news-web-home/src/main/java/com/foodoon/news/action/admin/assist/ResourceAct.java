@@ -23,8 +23,8 @@ import com.foodoon.common.web.ResponseUtils;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsResourceMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.core.web.WebErrors;
 
 /**
  * 资源的Action

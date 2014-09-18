@@ -36,8 +36,8 @@ import com.foodoon.core.web.WebErrors;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.manager.main.CmsUserMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 

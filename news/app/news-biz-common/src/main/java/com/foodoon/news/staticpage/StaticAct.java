@@ -7,6 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.Content;
 import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.ContentMng;
-import com.foodoon.news.web.CmsUtils;
+
 
 import freemarker.template.TemplateException;
 

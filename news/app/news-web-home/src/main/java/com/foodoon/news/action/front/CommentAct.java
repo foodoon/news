@@ -8,6 +8,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,8 +31,6 @@ import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.Content;
 import com.foodoon.news.manager.assist.CmsCommentMng;
 import com.foodoon.news.manager.main.ContentMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 
@@ -49,7 +49,7 @@ public class CommentAct {
 		Content content = contentMng.findById(contentId);
 		if (content == null) {
 			return FrontUtils.showMessage(request, model,
-					"comment.contentNotFound");
+                    "comment.contentNotFound");
 		}
 		if (content.getChannel().getCommentControl() == ChannelExt.COMMENT_OFF) {
 			return FrontUtils.showMessage(request, model, "comment.closed");

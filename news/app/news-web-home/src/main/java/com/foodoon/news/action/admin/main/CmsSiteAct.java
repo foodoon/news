@@ -23,7 +23,7 @@ import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.manager.main.CmsConfigMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsSiteMng;
-import com.foodoon.news.web.CmsUtils;
+import com.foodoon.news.helper.CmsUtils;
 
 @Controller
 public class CmsSiteAct {

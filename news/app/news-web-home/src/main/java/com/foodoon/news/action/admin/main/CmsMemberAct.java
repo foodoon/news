@@ -25,7 +25,7 @@ import com.foodoon.news.entity.main.CmsUserExt;
 import com.foodoon.news.manager.main.CmsGroupMng;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsUserMng;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class CmsMemberAct {

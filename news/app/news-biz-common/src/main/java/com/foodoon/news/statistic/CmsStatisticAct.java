@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,7 @@ import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsUserMng;
 import com.foodoon.news.statistic.CmsStatistic.CmsStatisticModel;
-import com.foodoon.news.web.CmsUtils;
+
 
 import static com.foodoon.common.page.SimplePage.cpn;
 import static com.foodoon.news.statistic.CmsStatistic.ACCESS_PAGE;

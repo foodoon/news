@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.ContentTag;
 import com.foodoon.news.manager.main.ContentTagMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 
 @Controller
 public class TagAct {

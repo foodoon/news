@@ -6,6 +6,9 @@ import static com.foodoon.news.Constants.TPLDIR_GUESTBOOK;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,9 +21,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.MemberConfig;
 import com.foodoon.news.manager.assist.CmsGuestbookMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 /**
  * 会员中心获取留言Action

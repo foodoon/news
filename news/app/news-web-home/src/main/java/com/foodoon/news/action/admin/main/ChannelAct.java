@@ -34,8 +34,8 @@ import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsModelItemMng;
 import com.foodoon.news.manager.main.CmsModelMng;
 import com.foodoon.news.manager.main.CmsUserMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.core.web.WebErrors;
 
 @Controller
 public class ChannelAct {

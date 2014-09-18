@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.core.web.WebErrors;
+import com.foodoon.news.helper.CmsUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.assist.CmsFriendlinkCtgMng;
 import com.foodoon.news.manager.assist.CmsFriendlinkMng;
 import com.foodoon.news.manager.main.CmsLogMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.WebErrors;
+
 
 @Controller
 public class CmsFriendlinkCtgAct {

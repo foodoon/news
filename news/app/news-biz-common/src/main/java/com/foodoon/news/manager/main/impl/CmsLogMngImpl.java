@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.manager.main.CmsLogMng;
 import com.foodoon.news.manager.main.CmsUserMng;
-import com.foodoon.news.web.CmsUtils;
+
 
 @Service
 @Transactional

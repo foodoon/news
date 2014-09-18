@@ -8,6 +8,7 @@ import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -24,7 +25,7 @@ import com.foodoon.core.entity.Ftp;
 import com.foodoon.core.web.WebErrors;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.MarkConfig;
-import com.foodoon.news.web.CmsUtils;
+
 
 /**
  * @author Tom

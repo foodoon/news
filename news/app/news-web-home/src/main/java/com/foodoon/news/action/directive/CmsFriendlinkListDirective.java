@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.foodoon.common.web.freemarker.DirectiveUtils;
 import com.foodoon.news.entity.assist.CmsFriendlink;
 import com.foodoon.news.manager.assist.CmsFriendlinkMng;
-import com.foodoon.news.web.FrontUtils;
+
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

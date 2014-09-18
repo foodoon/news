@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,7 @@ import com.foodoon.news.manager.main.ChannelMng;
 import com.foodoon.news.manager.main.CmsUserMng;
 import com.foodoon.news.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
 import com.foodoon.news.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
-import com.foodoon.news.web.CmsUtils;
+
 
 /**
  * @author Tom

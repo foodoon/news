@@ -5,6 +5,8 @@ import static com.foodoon.news.Constants.TPLDIR_SPECIAL;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -25,8 +27,7 @@ import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.manager.assist.CmsGuestbookCtgMng;
 import com.foodoon.news.manager.assist.CmsGuestbookMng;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 

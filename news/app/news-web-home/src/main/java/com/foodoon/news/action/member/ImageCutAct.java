@@ -6,6 +6,8 @@ import java.io.File;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.foodoon.news.helper.CmsUtils;
+import com.foodoon.news.helper.FrontUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +22,7 @@ import com.foodoon.core.manager.DbFileMng;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.entity.main.CmsUser;
 import com.foodoon.news.entity.main.MemberConfig;
-import com.foodoon.news.web.CmsUtils;
-import com.foodoon.news.web.FrontUtils;
+
 
 @Controller
 public class ImageCutAct {

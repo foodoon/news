@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.foodoon.news.helper.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,7 +16,7 @@ import com.foodoon.common.web.freemarker.ParamsRequiredException;
 import com.foodoon.news.entity.main.Channel;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.main.ChannelMng;
-import com.foodoon.news.web.FrontUtils;
+
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;
