@@ -12,6 +12,7 @@ import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.foodoon.news.Constants;
 import com.foodoon.news.helper.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.foodoon.common.web.session.SessionProvider;
 import com.foodoon.common.web.springmvc.RealPathResolver;
-import com.foodoon.news.Constants;
 import com.foodoon.news.entity.main.CmsSite;
 import com.foodoon.news.manager.main.CmsSiteMng;
 

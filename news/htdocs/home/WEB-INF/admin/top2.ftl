@@ -331,7 +331,7 @@
 <!-- BEGIN Button User -->
 <li class="user-profile">
     <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
-        <img class="nav-user-photo" src="${base}/res/admin/img/admin/logo.png" alt="为民网管理控制台"/>
+        <img class="nav-user-photo" src="${base}/static/admin/img/admin/logo.png" alt="为民网管理控制台"/>
                                 <span class="hidden-phone" id="user_info">
                                     <@s.ma code="global.admin.welcome" args=[user.username]/>
                                 </span>

@@ -80,7 +80,7 @@ public class CmsSite extends BaseCmsSite {
 	}
 
 	/**
-	 * 获得模板路径。如：/WEB-INF/t/cms/www
+	 * 获得模板路径。如：/WEB-INF/guest
 	 * 
 	 * @return
 	 */
@@ -89,7 +89,7 @@ public class CmsSite extends BaseCmsSite {
 	}
 
 	/**
-	 * 获得模板方案路径。如：/WEB-INF/t/cms/www/default
+	 * 获得模板方案路径。如：/WEB-INF/guest
 	 * 
 	 * @return
 	 */
@@ -98,7 +98,7 @@ public class CmsSite extends BaseCmsSite {
 	}
 
 	/**
-	 * 获得模板资源路径。如：/r/cms/www
+	 * 获得模板资源路径。如：/static/global
 	 * 
 	 * @return
 	 */

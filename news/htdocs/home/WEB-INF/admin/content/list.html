@@ -185,13 +185,13 @@ function chgStatus() {
 		<div style="width:78px; float:left;">
 		<@cms_perm url="/content/v_add.do">
 		 <ul id="jsddm">
-	        <li style="background-image:url(${base}/res/admin/img/admin/bluemenu.gif); width:80px; height:25px; line-height:25px;"><a href="#" style="text-align:center;"><@s.m "content.opt.publish"/></a>
+	        <li style="background-image:url(${base}/static/admin/img/admin/bluemenu.gif); width:80px; height:25px; line-height:25px;"><a href="#" style="text-align:center;"><@s.m "content.opt.publish"/></a>
 	        <ul>
 	            <#list models as m>
 			 	<li value="1">
 	            <a href="v_add.do?modelId=${m.id}&cid=${cid!}"" >
-		            <#if m.id gt 0&&m.id lt 9><img src="${base}/res/common/img/theme/model-${m.id}.gif" / style="vertical-align:middle;">
-					<#else><img src="${base}/res/common/img/theme/model-0.gif"/>
+		            <#if m.id gt 0&&m.id lt 9><img src="${base}/static/common/img/theme/model-${m.id}.gif" / style="vertical-align:middle;">
+					<#else><img src="${base}/static/common/img/theme/model-0.gif"/>
 					</#if>
 					${m.name}</a>
 	            </li>
@@ -246,8 +246,8 @@ function chgStatus() {
 	</@p.column><#t/>
 	<@p.column title="ID">${content.id}</@p.column><#t/>
 	<@p.column code="content.title">
-		<#if content.model.id gt 0&&content.model.id lt 9><img src="${base}/res/common/img/theme/model-${content.model.id}.gif"/>
-		<#else><img src="${base}/res/common/img/theme/model-0.gif"/>
+		<#if content.model.id gt 0&&content.model.id lt 9><img src="${base}/static/common/img/theme/model-${content.model.id}.gif"/>
+		<#else><img src="${base}/static/common/img/theme/model-0.gif"/>
 		</#if>
 		<#if content.topLevel gt 0><span style="color:red">[<@s.m "content.topLevel.short"/>${content.topLevel}]</span></#if>
 		<#if content.recommend><span style="color:red">[<@s.m "content.recommend.short"/>]</span></#if>
