@@ -1,65 +1,51 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>管理控制台</title>
-<#include "/admin/head.html"/>
-
-
 <script type="text/javascript">
-function g(o){
-	return document.getElementById(o);
-}
-function HoverLi(id){
-	$("li[id^='tb_']").each(function(){
-		$(this).removeClass("current");
-		$(this).addClass("normal");
-	});
-	$("#tb_"+id).removeClass("normal");
-	$("#tb_"+id).addClass("current");
-}
-function countUnreadMsg(){
-	 $.post("message/v_countUnreadMsg.do", {
-		}, function(data) {
-			if(data.result){
-				 $("#countDiv").html(""+data.count+"");
-			}else{
-				alert("<@s.m 'cmsMessage.noLogin'/>");
-			}
-		}, "json");
-	 setTimeout( "countUnreadMsg() ",1000*60*10);    
-}
-$(function(){
-	$('a').bind("focus", function(){   
-	    $(this).blur();   
-	}); 
-	countUnreadMsg();
-});
-setTimeout( "countUnreadMsg() ",1000*60*10); 
-function mapDialog(){
-    alert(1)
-	var result=window.showModalDialog("map.do","","dialogHeight:600px;dialogWidth:800px;center:yes;resizable: yes;");
-	if(result!=null){
-		var href=result.split(";")[0];
-		var target=result.split(";")[1];
-		if(target=="rightFrame"){
-				window.parent.mainFrame.document.getElementById(target).src=href;
-				var rightFrameSrc=window.parent.mainFrame.document.getElementById(target).src;
-				 if(rightFrameSrc.indexOf("frame")>=0){
-					window.parent.mainFrame.document.getElementById(target).src=rightFrameSrc.split("frame/")[0]+rightFrameSrc.split("frame/")[1];
-					}
-			}
-		else {
-			 	window.parent.document.getElementById(target).src=href;
-			}
-		}
-}
+    function g(o) {
+        return document.getElementById(o);
+    }
+    function HoverLi(id) {
+        $("li[id^='tb_']").each(function () {
+            $(this).removeClass("current");
+            $(this).addClass("normal");
+        });
+        $("#tb_" + id).removeClass("normal");
+        $("#tb_" + id).addClass("current");
+    }
+    function countUnreadMsg() {
+        $.post("message/v_countUnreadMsg.do", {
+        }, function (data) {
+            if (data.result) {
+                $("#countDiv").html("" + data.count + "");
+            } else {
+                alert("<@s.m 'cmsMessage.noLogin'/>");
+            }
+        }, "json");
+        setTimeout("countUnreadMsg() ", 1000 * 60 * 10);
+    }
+    $(function () {
+        $('a').bind("focus", function () {
+            $(this).blur();
+        });
+        countUnreadMsg();
+    });
+    setTimeout("countUnreadMsg() ", 1000 * 60 * 10);
+    function mapDialog() {
+        var result = window.showModalDialog("map.do", "", "dialogHeight:600px;dialogWidth:800px;center:yes;resizable: yes;");
+        if (result != null) {
+            var href = result.split(";")[0];
+            var target = result.split(";")[1];
+            if (target == "rightFrame") {
+                window.parent.mainFrame.document.getElementById(target).src = href;
+                var rightFrameSrc = window.parent.mainFrame.document.getElementById(target).src;
+                if (rightFrameSrc.indexOf("frame") >= 0) {
+                    window.parent.mainFrame.document.getElementById(target).src = rightFrameSrc.split("frame/")[0] + rightFrameSrc.split("frame/")[1];
+                }
+            }
+            else {
+                window.parent.document.getElementById(target).src = href;
+            }
+        }
+    }
 </script>
-
-</head>
-
-<body>
-<!-- BEGIN Theme Setting -->
 <div id="theme-setting">
     <a href="#"><i class="icon-gears icon-2x"></i></a>
     <ul>
@@ -108,7 +94,8 @@ function mapDialog(){
         <li>
             <span></span>
             <a data-target="navbar" href="#"><i class="icon-check-empty"></i> Fixed Navbar</a>
-            <a class="pull-right visible-desktop" data-target="sidebar" href="#"><i class="icon-check-empty"></i> Fixed Sidebar</a>
+            <a class="pull-right visible-desktop" data-target="sidebar" href="#"><i class="icon-check-empty"></i> Fixed
+                Sidebar</a>
         </li>
     </ul>
 </div>
@@ -121,7 +108,7 @@ function mapDialog(){
 <a href="#" class="brand">
     <small>
         <i class="icon-desktop"></i>
-        FLATY Admin
+        为民网管理
     </small>
 </a>
 <!-- END Brand -->
@@ -225,6 +212,7 @@ function mapDialog(){
         <li class="notify">
             <a href="#">
                 <i class="icon-comment orange"></i>
+
                 <p>New Comments</p>
                 <span class="badge badge-warning">4</span>
             </a>
@@ -233,6 +221,7 @@ function mapDialog(){
         <li class="notify">
             <a href="#">
                 <i class="icon-twitter blue"></i>
+
                 <p>New Twitter followers</p>
                 <span class="badge badge-info">7</span>
             </a>
@@ -240,7 +229,8 @@ function mapDialog(){
 
         <li class="notify">
             <a href="#">
-                <img src="img/demo/avatar/avatar2.jpg" alt="Alex" />
+                <img src="img/demo/avatar/avatar2.jpg" alt="Alex"/>
+
                 <p>David would like to become moderator.</p>
             </a>
         </li>
@@ -248,6 +238,7 @@ function mapDialog(){
         <li class="notify">
             <a href="#">
                 <i class="icon-bug pink"></i>
+
                 <p>New bug in program!</p>
             </a>
         </li>
@@ -255,6 +246,7 @@ function mapDialog(){
         <li class="notify">
             <a href="#">
                 <i class="icon-shopping-cart green"></i>
+
                 <p>You have some new orders</p>
                 <span class="badge badge-success">+10</span>
             </a>
@@ -284,7 +276,8 @@ function mapDialog(){
 
         <li class="msg">
             <a href="#">
-                <img src="img/demo/avatar/avatar3.jpg" alt="Sarah's Avatar" />
+                <img src="img/demo/avatar/avatar3.jpg" alt="Sarah's Avatar"/>
+
                 <div>
                     <span class="msg-title">Sarah</span>
                                             <span class="msg-time">
@@ -292,13 +285,15 @@ function mapDialog(){
                                                 <span>a moment ago</span>
                                             </span>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
             </a>
         </li>
 
         <li class="msg">
             <a href="#">
-                <img src="img/demo/avatar/avatar4.jpg" alt="Emma's Avatar" />
+                <img src="img/demo/avatar/avatar4.jpg" alt="Emma's Avatar"/>
+
                 <div>
                     <span class="msg-title">Emma</span>
                                             <span class="msg-time">
@@ -312,7 +307,8 @@ function mapDialog(){
 
         <li class="msg">
             <a href="#">
-                <img src="img/demo/avatar/avatar5.jpg" alt="John's Avatar" />
+                <img src="img/demo/avatar/avatar5.jpg" alt="John's Avatar"/>
+
                 <div>
                     <span class="msg-title">John</span>
                                             <span class="msg-time">
@@ -335,7 +331,7 @@ function mapDialog(){
 <!-- BEGIN Button User -->
 <li class="user-profile">
     <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
-        <img class="nav-user-photo" src="${base}/res/admin/img/admin/logo.png" alt="为民网管理控制台" />
+        <img class="nav-user-photo" src="${base}/res/admin/img/admin/logo.png" alt="为民网管理控制台"/>
                                 <span class="hidden-phone" id="user_info">
                                     <@s.ma code="global.admin.welcome" args=[user.username]/>
                                 </span>
@@ -394,8 +390,8 @@ function mapDialog(){
         <li class="divider"></li>
 
         <li>
-             <a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');">
-                <i class="icon-off"><@s.m "global.admin.logout"/></i>
+            <a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');">
+            <i class="icon-off"><@s.m "global.admin.logout"/></i>
             </a>
         </li>
     </ul>
@@ -404,116 +400,8 @@ function mapDialog(){
 <!-- END Button User -->
 </ul>
 <!-- END Navbar Buttons -->
-</div><!--/.container-fluid-->
-</div><!--/.navbar-inner-->
 </div>
-
-<!-- END Navbar -->
-<!--
-<div id="top">
-     <div class="top">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="215"><div class="logo"><img src="${base}/res/admin/img/admin/logo.png" width="215" height="69" /></div></td>
-            <td valign="top">
-                <div class="topbg">
-                     <div class="login-welcome">
-   
-                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                  <tr>
-                                    <td width="400">&nbsp;</td>
-                                    <td width="120" height="38">
-                                    <img src="${base}/res/admin/img/admin/welconlogin-icon.png"/><span id="welcome"><@s.ma code="global.admin.welcome" args=[user.username]/></span>
-                                    <img src="${base}/res/admin/img/admin/loginout-icon.png"/><a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');"><@s.m "global.admin.logout"/></a>　　
-                                    <img src="${base}/res/admin/img/admin/message-unread.png"/>&nbsp;<a href="message/v_list.do" target="rightFrame">您有<span id="countDiv"></span>条信息未读</a>
-                                    </td>
-
-                                    <td width="80">
-                                   &nbsp; <a href="#" onclick="mapDialog()">【网站地图】</a>
-                                    &nbsp;<a id="view_index" href="${site.url}" target="_blank"><@s.m "global.admin.viewFrontIndex"/></a>
-                                 
-                                    </td>
-
-                                  </tr>
-                                </table>
-                       </div>  
-                     <div class="nav">
-                     	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td  width="14" height="31"></td>
-                                <td>
-                                	<ul class="nav-menu">
-                                    	<li class="current" id="tb_11" onclick="HoverLi(11);">
-                                    	<a href="main.do" target="mainFrame"><span><@s.m "global.admin.home"/></span></a>
-                                    	</li>
-										<@cms_perm url="/frame/channel_main.do">			
-										<li class="normal" id="tb_12" onclick="HoverLi(12);">
-										<a href="frame/channel_main.do" target="mainFrame">
-										<span><@s.m "cms.function.channel"/></span></a>
-										</li>
-										</@cms_perm>
-										<@cms_perm url="/frame/content_main.do">
-										<li class="normal" id="tb_13" onclick="HoverLi(13);">
-										<a href="frame/content_main.do" target="mainFrame">
-										<span><@s.m "cms.function.content"/></span></a></li>
-										</@cms_perm>
-										<@cms_perm url="/frame/template_main.do">
-										<li class="normal" id="tb_14" onclick="HoverLi(14);">
-										<a href="frame/template_main.do" target="mainFrame">
-										<span><@s.m "cms.function.template"/></span>
-										</a>
-										</li>
-										</@cms_perm>
-										<@cms_perm url="/frame/resource_main.do">
-										<li class="normal" id="tb_15" onclick="HoverLi(15);"><a href="frame/resource_main.do" target="mainFrame"><@s.m "cms.function.resource"/></a></li>
-										</@cms_perm>
-
-										<@cms_perm url="/frame/assistant_main.do">
-										<li class="normal" id="tb_16" onclick="HoverLi(16);">
-										<a href="frame/assistant_main.do" target="mainFrame">
-										<span><@s.m "cms.function.assistant"/></span></a></li>
-										</@cms_perm>
-										
-										<@cms_perm url="/frame/maintain_main.do">
-										<li class="normal" id="tb_17" onclick="HoverLi(17);">
-										<a href="frame/maintain_main.do" target="mainFrame">
-										<span><@s.m "cms.function.maintain"/></span></a></li>
-										</@cms_perm>
-									
-										<@cms_perm url="/frame/generate_main.do">
-										<li class="normal" id="tb_18" onclick="HoverLi(18);">
-										<a href="frame/generate_main.do" target="mainFrame">
-										<span><@s.m "cms.function.generate"/></span></a></li>
-										
-										</@cms_perm>
-										
-										<@cms_perm url="/frame/user_main.do">
-										<li class="normal" id="tb_19" onclick="HoverLi(19);">
-										<a href="frame/user_main.do" target="mainFrame">
-										<span><@s.m "cms.function.user"/></span>
-										</a></li>
-										</@cms_perm>
-										<@cms_perm url="/frame/config_main.do">
-										<li class="normal" id="tb_110" onclick="HoverLi(110);">
-										<a href="frame/config_main.do" target="mainFrame">
-										<span><@s.m "cms.function.config"/></span></a></li>
-										</@cms_perm>
-
-										<@cms_perm url="/frame/statistic_main.do">
-										<li class="sep"></li><li class="normal" id="tb_111" onclick="HoverLi(1,11,11);"><a href="frame/statistic_main.do" target="mainFrame"><@s.m "cms.function.statistic"/></a></li>
-										</@cms_perm>
-
-                                    </ul>
-                                </td>
-                              </tr>
-                            </table>
-                     </div>  
-                </div>
-          </tr>
-        </table>
-     </div>
+<!--/.container-fluid-->
 </div>
-<div class="top-bottom"></div>
--->
-</body>
-</html>
+<!--/.navbar-inner-->
+</div>

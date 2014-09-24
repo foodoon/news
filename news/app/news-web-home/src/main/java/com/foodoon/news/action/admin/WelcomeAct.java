@@ -1,10 +1,14 @@
 package com.foodoon.news.action.admin;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.alibaba.fastjson.JSON;
+import com.foodoon.news.entity.main.Channel;
+import com.foodoon.news.manager.main.ChannelMng;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,7 +24,24 @@ import com.foodoon.news.helper.CmsUtils;
 @Controller
 public class WelcomeAct {
 	@RequestMapping("/index.do")
-	public String index() {
+	public String index(HttpServletRequest request, ModelMap model) {
+        List<CmsSite> siteList = cmsSiteMng.getList();
+        CmsSite site = CmsUtils.getSite(request);
+        CmsUser user = CmsUtils.getUser(request);
+        model.addAttribute("siteList", siteList);
+        model.addAttribute("site", site);
+        model.addAttribute("siteParam", AdminContextInterceptor.SITE_PARAM);
+        model.addAttribute("user", user);
+
+
+        List<Channel> list = channelMng.getTopList(site.getId(), false);
+        List<Channel> channelList = new ArrayList<Channel>();
+        for(Channel channel:list) {
+            List<Channel> tempList = channelMng.getChildList(channel.getId(), false);
+            channelList.addAll(tempList);
+        }
+
+        model.addAttribute("channelList", channelList);
 		return "index";
 	}
 	
@@ -41,6 +62,8 @@ public class WelcomeAct {
 		model.addAttribute("user", user);
 		return "top";
 	}
+
+
 
 	@RequestMapping("/main.do")
 	public String main() {
@@ -80,4 +103,6 @@ public class WelcomeAct {
 	private CmsSiteMng cmsSiteMng;
 	@Autowired
 	private CmsStatisticSvc cmsStatisticSvc;
+    @Autowired
+    private ChannelMng channelMng;
 }

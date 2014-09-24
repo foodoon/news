@@ -507,10 +507,12 @@ public class Channel extends BaseChannel implements HibernateTree<Integer>,
 		int tplPathLength = getSite().getTplPath().length();
 		if(list!=null){
 			for(ChannelModel cm:list){
-				String tpl=cm.getTplContent();
-				if(StringUtils.isNotBlank(tpl)){
-					tpls.add(tpl.substring(tplPathLength));
-				}
+                if(cm!=null) {
+                    String tpl = cm.getTplContent();
+                    if (StringUtils.isNotBlank(tpl)) {
+                        tpls.add(tpl.substring(tplPathLength));
+                    }
+                }
 			}
 		}
 		return tpls;
