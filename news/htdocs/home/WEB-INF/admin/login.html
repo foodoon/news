@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>管理控制台</title>
-<#include "/admin/head.html"/>
+<#include "/admin/head_new.html"/>
 <script type="text/javascript">
 if(top!=this) {
 	top.location=this.location;
@@ -58,13 +58,14 @@ $(function() {
         </#if>
         <div class="form-group">
             <div class="controls">
-                <button type="submit" class="btn btn-primary form-control">登录</button>
+                <button type="submit" class="btn btn-primary  btn-xlarge">登录</button>
             </div>
         </div>
         <hr/>
 
     </form>
     <!-- END Login Form -->
+    </div>
     <!--
 <form id="jvForm" action="login.do" method="post">
 <#if returnUrl??><input type="hidden" name="returnUrl" value="${returnUrl}"/></#if>
