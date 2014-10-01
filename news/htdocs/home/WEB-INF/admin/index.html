@@ -14,7 +14,7 @@
 <noframes><body></body></noframes>
 -->
 
-<body>
+<body scroll="yes" style="overflow-x:hidden;overflow-y:scroll;height:800px">
 <#include "top2.ftl" parse=true/>
 <div class="container-fluid" id="main-container">
     <!-- BEGIN Sidebar -->
@@ -100,7 +100,7 @@
                 <@cms_perm url="/flow_pv/v_list.do">
                 <li><a href="flow_pv/v_list.do" target="rightFrame"><@s.m "statistic.function.pv"/></a></li>
                 </@cms_perm>
-        <!--
+<!--
                 <@cms_perm url="/flow_uniqueIp/v_list.do">
                 <li><a href="flow_uniqueIp/v_list.do" target="rightFrame"><@s.m "statistic.function.uniqueIp"/></a></li>
                 </@cms_perm>
@@ -128,7 +128,7 @@
                 <@cms_perm url="/statistic_flow/v_list.do">
                 <li><a href="statistic_flow/v_list.do" target="rightFrame"><@s.m "statistic.function.flowinit"/></a></li>
                 </@cms_perm>
-                -->
+-->
         </ul>
 <!-- END Submenu -->
 </li>
